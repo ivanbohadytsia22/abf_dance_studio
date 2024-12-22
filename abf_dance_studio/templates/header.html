@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>abf</title>
+    <style>
+        /* Стилі для всього тіла сторінки */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Світло-сірий фон */
+        }
+
+        /* Стилі для хедера */
+        header {
+            background-color: #3a4c66; /* Темно-синій фон */
+            color: white; /* Білий текст */
+            padding: 20px; /* Відступи з усіх боків */
+            display: flex; /* Використовуємо Flexbox для вирівнювання елементів */
+            justify-content: space-between; /* Розташування елементів по краях (логотип зліва, меню справа) */
+            align-items: center; /* Вертикальне вирівнювання елементів */
+        }
+
+        /* Стилі для логотипу */
+        header .logo h1 {
+            font-size: 2.5rem; /* Великий розмір для логотипу */
+            margin: 0; /* Видаляємо стандартні відступи */
+        }
+
+        /* Стилі для навігаційного меню */
+        nav {
+            flex-grow: 1; /* Дозволяє меню зайняти доступний простір між логотипом і краєм */
+            display: flex; /* Використовуємо Flexbox для вирівнювання меню */
+            justify-content: center; /* Центруємо меню по горизонталі */
+        }
+
+        nav ul {
+            list-style-type: none; /* Видаляємо маркери списку */
+            margin: 0; /* Видаляємо відступи */
+            padding: 0; /* Видаляємо внутрішні відступи */
+            display: flex; /* Використовуємо Flexbox для горизонтального вирівнювання пунктів меню */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Відступи між пунктами меню */
+        }
+
+        nav ul li a {
+            color: white; /* Білий текст для посилань */
+            text-decoration: none; /* Видаляємо підкреслення */
+            font-size: 1.1rem; /* Розмір шрифта для меню */
+            transition: color 0.3s; /* Плавний перехід кольору при наведенні */
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f; /* Жовтий колір для підсвічування посилань при наведенні */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ABF</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#news">Абоніменти</a></li>
+                <li><a href="#events">Танці</a></li>
+                <li><a href="#about">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div>{% block content %}{% endblock %}</div>
+
+</body>
+</html>
